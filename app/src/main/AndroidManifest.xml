@@ -43,15 +43,17 @@
         <activity
             android:name=".OrderTrackingActivity"
             android:label="@string/title_activity_order_tracking"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
         <activity
             android:name=".DriverController"
-            android:label="@string/title_activity_driver_controller"/>
+            android:label="@string/title_activity_driver_controller" />
+        <activity android:name=".DriverActivity" />
+        <activity android:name=".UserActivity"></activity>
     </application>
 
 </manifest>

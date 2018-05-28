@@ -1,5 +1,6 @@
 package tk.allstarproduction.smart_maisto_pristatymas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -24,5 +25,11 @@ public class DispecherActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    //stebeti vairuotojo pozicija
+    public void showPosition(View view) {
+        Intent intent = new Intent(this, DriverController.class);
+        startActivity(intent);
     }
 }
