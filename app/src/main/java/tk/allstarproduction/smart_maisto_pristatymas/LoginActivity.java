@@ -219,6 +219,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
                         if(jsonObject.names().get(0).equals("success")){
                             editor.putString("api_token", jsonObject.get("api_token").toString());
+                            editor.putString("role", jsonObject.get("role").toString());
                             editor.commit();
                             toastText(jsonObject.get("success").toString());
                             startActivity(new Intent(getApplicationContext(),OrderActivity.class));
