@@ -3,6 +3,9 @@ package tk.allstarproduction.smart_maisto_pristatymas;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -28,9 +31,23 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -43,6 +60,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
+    private RequestQueue requestQueue;
+    public static final String registerURL="http://bomb4you.tk/api/v1/auth/register";
+    private StringRequest request;
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -153,8 +173,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mPasswordView.setError(null);
 
         // Store values at the time of the login attempt.
-        String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
+        final String email = mEmailView.getText().toString();
+        final String password = mPasswordView.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
@@ -185,9 +205,54 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            mAuthTask = new UserLoginTask(email, password);
-            mAuthTask.execute((Void) null);
+
+            requestQueue = Volley.newRequestQueue(this);
+            final SharedPreferences sharedPref = getSharedPreferences("Preferences", Context.MODE_PRIVATE);
+            final SharedPreferences.Editor editor = sharedPref.edit();
+
+            request = new StringRequest(Request.Method.POST, "https://lmzed.xyz/api/user/login", new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+
+
+                        if(jsonObject.names().get(0).equals("success")){
+                            editor.putString("api_token", jsonObject.get("api_token").toString());
+                            editor.commit();
+                            toastText(jsonObject.get("success").toString());
+                            startActivity(new Intent(getApplicationContext(),OrderActivity.class));
+                        }
+                        else{
+                            toastText(jsonObject.get("error").toString());
+                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    toastText("Wrong registration data");
+                }
+            }){
+                @Override
+                protected Map<String, String> getParams () throws AuthFailureError {
+                HashMap<String, String> hashMap = new HashMap<String, String>();
+                hashMap.put("email", email);
+                hashMap.put("password", password);
+                hashMap.put("api_token", sharedPref.getString("api_token", null));
+                hashMap.put("remember_token", "1");
+                return hashMap;
+                }
+            };
+            requestQueue.add(request);
         }
+    }
+
+    public void toastText(String text) {
+        Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT).show();
     }
 
     private boolean isEmailValid(String email) {
