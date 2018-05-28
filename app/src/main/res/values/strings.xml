@@ -110,4 +110,5 @@
     <string name="title_activity_dispecher">Užsakymų valdymas</string>
     <string name="title_activity_order">Užsakymas</string>
     <string name="title_activity_order_tracking">Užsakymo būsena</string>
+    <string name="title_activity_driver_controller">DriverPage</string>
 </resources>
