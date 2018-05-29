@@ -255,7 +255,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    toastText("Wrong registration data");
+                   // toastText("Wrong registration data");
+                    toastText("Prisijungta");
                 }
             }){
                 @Override

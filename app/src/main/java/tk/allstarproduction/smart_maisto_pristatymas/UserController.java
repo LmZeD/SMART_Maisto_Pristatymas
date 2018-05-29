@@ -24,7 +24,9 @@ public class UserController extends AppCompatActivity {
     }
 
     //perziureti prekes
-    public void getItemList() {
+    public void getItemList(View view) {
+        Intent intent = new Intent(this, OrderController.class);
+        startActivity(intent);
     }
 
     //užsakyti prekes

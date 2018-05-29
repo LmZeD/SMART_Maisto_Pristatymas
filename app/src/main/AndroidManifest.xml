@@ -39,7 +39,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".OrderController"
-            android:label="@string/title_activity_order"
+            android:label="Užsakymų valdymas"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
