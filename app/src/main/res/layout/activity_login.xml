@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:parentActivityName=".MainActivity"
     tools:context="tk.allstarproduction.smart_maisto_pristatymas.LoginActivity">
 
     <!-- Login progress -->
@@ -71,8 +72,9 @@
                 android:layout_marginTop="16dp"
                 android:text="Prisijungti"
                 android:textStyle="bold" />
+
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/bRegister"
                 style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,4 +85,13 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/bRandom"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:text="random"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="300dp" />
 </android.support.constraint.ConstraintLayout>

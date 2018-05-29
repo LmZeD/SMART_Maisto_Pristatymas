@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/email_login_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bUser"
+            android:layout_width="381dp"
+            android:layout_height="wrap_content"
+            android:onClick="openUser"
+            android:text="User"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/bDriver"
+            android:layout_width="385dp"
+            android:layout_height="52dp"
+            android:onClick="openDriver"
+            android:text="Driver"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="64dp" />
+
+        <Button
+            android:id="@+id/bDispatcher"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:onClick="openDisp"
+            android:text="Dispatcher"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="116dp" />
+
+        <Button
+            android:id="@+id/bAdmin"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:onClick="openAdmin"
+            android:text="Admin"
+            tools:layout_editor_absoluteX="2dp"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <Button
+            android:id="@+id/bSupp"
+            android:layout_width="382dp"
+            android:layout_height="wrap_content"
+            android:onClick="openSupp"
+            android:text="Supplier"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="196dp" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
