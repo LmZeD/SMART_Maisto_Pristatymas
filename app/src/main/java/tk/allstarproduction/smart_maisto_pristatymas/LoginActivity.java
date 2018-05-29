@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      */
     private static final int REQUEST_READ_CONTACTS = 0;
     private RequestQueue requestQueue;
-    public static final String registerURL="http://bomb4you.tk/api/v1/auth/register";
+    //public static final String registerURL="https://lmzed.xyz/api/user/login";
     private StringRequest request;
 
     /**
@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * TODO: remove after connecting to a real authentication system.
      */
     private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
+            "foo@example.com:hello", "bar@example.com:world","gg@gg.co:gg"
     };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -112,6 +112,26 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        final Button bRegister = (Button)findViewById(R.id.bRegister);
+        bRegister.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent regIntent = new Intent(LoginActivity.this,RegisterActivity.class);
+                LoginActivity.this.startActivity(regIntent);
+            }
+        });
+//        final Button bRandom = (Button)findViewById(R.id.bRandom);
+//        bRandom.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v){
+//                //prisijungta?
+//                Intent logIntent = new Intent(LoginActivity.this,DriverController.class);
+//                LoginActivity.this.startActivity(logIntent);
+//            }
+//        });
+
+
     }
 
     private void populateAutoComplete() {
@@ -249,6 +269,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 }
             };
             requestQueue.add(request);
+            //Prisijungta?--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            Intent logIntent = new Intent(LoginActivity.this,RolesActivity.class);
+            LoginActivity.this.startActivity(logIntent);
+
+
         }
     }
 

@@ -10,7 +10,7 @@ public class UserActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.customer_page);
     }
     public void showDriverData(View view) {
         Intent intent = new Intent(this, DriverController.class);

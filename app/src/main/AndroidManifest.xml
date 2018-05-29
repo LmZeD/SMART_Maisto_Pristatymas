@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -53,7 +54,13 @@
             android:name=".DriverController"
             android:label="@string/title_activity_driver_controller" />
         <activity android:name=".DriverActivity" />
-        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".UserActivity" />
+        <activity android:name=".RolesActivity" />
+        <activity android:name=".AdminActivity" />
+        <activity
+            android:name=".SupplierActivity"
+            android:label="@string/title_activity_supplier"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
