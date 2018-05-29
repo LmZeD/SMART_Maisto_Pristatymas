@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="tk.allstarproduction.smart_maisto_pristatymas.RegisterActivity">
+    tools:context="tk.allstarproduction.smart_maisto_pristatymas.RegisterController">
 
     <!-- Login progress -->
     <ProgressBar

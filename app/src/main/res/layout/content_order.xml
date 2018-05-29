@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="tk.allstarproduction.smart_maisto_pristatymas.OrderActivity"
+    tools:context="tk.allstarproduction.smart_maisto_pristatymas.OrderController"
     tools:showIn="@layout/activity_order">
 
 </android.support.constraint.ConstraintLayout>
