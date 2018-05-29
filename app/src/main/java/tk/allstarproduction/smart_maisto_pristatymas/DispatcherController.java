@@ -8,22 +8,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class SupplierActivity extends AppCompatActivity {
+public class DispatcherController extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.supplier_page);
-
-
+        setContentView(R.layout.dispatcher_page);
     }
-    public void showOrders(View view) {
+
+    //stebeti vairuotojo pozicija
+    public void showPosition(View view) {
         Intent intent = new Intent(this, DriverController.class);
         startActivity(intent);
     }
-    public void confirmOrder(View view) {
-        Intent intent = new Intent(this, OrderActivity.class);
-        startActivity(intent);
+    public void confirmOrder(){
+        //
     }
-
 }

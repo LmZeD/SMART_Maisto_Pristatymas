@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         bRegister.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                Intent regIntent = new Intent(LoginActivity.this,RegisterActivity.class);
+                Intent regIntent = new Intent(LoginActivity.this,RegisterController.class);
                 LoginActivity.this.startActivity(regIntent);
             }
         });
@@ -242,7 +242,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                             editor.putString("role", jsonObject.get("role").toString());
                             editor.commit();
                             toastText(jsonObject.get("success").toString());
-                            startActivity(new Intent(getApplicationContext(),OrderActivity.class));
+                            startActivity(new Intent(getApplicationContext(),OrderController.class));
                         }
                         else{
                             toastText(jsonObject.get("error").toString());
@@ -270,7 +270,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             };
             requestQueue.add(request);
             //Prisijungta?--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            Intent logIntent = new Intent(LoginActivity.this,RolesActivity.class);
+            Intent logIntent = new Intent(LoginActivity.this,RoleController.class);
             LoginActivity.this.startActivity(logIntent);
 
 

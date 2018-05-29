@@ -23,27 +23,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".RegisterController"
             android:label="@string/title_activity_register" />
         <activity
-            android:name=".OrdersActivity"
+            android:name=".OrdersController"
             android:label="@string/title_activity_orders"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ManagerActivity"
+            android:name=".ManagerController"
             android:label="@string/title_activity_manager"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".DispecherActivity"
+            android:name=".DispatcherController"
             android:label="@string/title_activity_dispecher"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".OrderActivity"
+            android:name=".OrderController"
             android:label="@string/title_activity_order"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".OrderTrackingActivity"
-            android:label="@string/title_activity_order_tracking"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
@@ -53,12 +49,12 @@
         <activity
             android:name=".DriverController"
             android:label="@string/title_activity_driver_controller" />
-        <activity android:name=".DriverActivity" />
-        <activity android:name=".UserActivity" />
-        <activity android:name=".RolesActivity" />
-        <activity android:name=".AdminActivity" />
+        <activity android:name=".DriversController" />
+        <activity android:name=".UserController" />
+        <activity android:name=".RoleController" />
+        <activity android:name=".AdminController" />
         <activity
-            android:name=".SupplierActivity"
+            android:name=".SupplierController"
             android:label="@string/title_activity_supplier"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".PaymentController" />

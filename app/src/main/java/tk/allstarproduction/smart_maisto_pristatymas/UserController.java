@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 
-public class UserActivity extends AppCompatActivity {
+public class UserController extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

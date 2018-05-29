@@ -3,12 +3,10 @@ package tk.allstarproduction.smart_maisto_pristatymas;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.content.Intent;
-import android.widget.TextView;
 
 
-public class RolesActivity extends AppCompatActivity {
+public class RoleController extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,23 +15,23 @@ public class RolesActivity extends AppCompatActivity {
     }
 
     public void openUser(View view) {
-        Intent intent = new Intent(this, UserActivity.class);
+        Intent intent = new Intent(this, UserController.class);
         startActivity(intent);
     }
     public void openDisp(View view) {
-        Intent intent = new Intent(this, DispecherActivity.class);
+        Intent intent = new Intent(this, DispatcherController.class);
         startActivity(intent);
     }
     public void openAdmin(View view) {
-        Intent intent = new Intent(this, AdminActivity.class);
+        Intent intent = new Intent(this, AdminController.class);
         startActivity(intent);
     }
     public void openDriver(View view) {
-        Intent intent = new Intent(this, DriverActivity.class);
+        Intent intent = new Intent(this, DriversController.class);
         startActivity(intent);
     }
     public void openSupp(View view) {
-        Intent intent = new Intent(this, SupplierActivity.class);
+        Intent intent = new Intent(this, SupplierController.class);
         startActivity(intent);
     }
 
