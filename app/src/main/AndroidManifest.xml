@@ -60,7 +60,9 @@
         <activity
             android:name=".SupplierActivity"
             android:label="@string/title_activity_supplier"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PaymentController" />
+        <activity android:name=".StatisticsController"></activity>
     </application>
 
 </manifest>

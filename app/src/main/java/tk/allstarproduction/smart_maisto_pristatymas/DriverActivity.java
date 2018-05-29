@@ -18,10 +18,12 @@ public class DriverActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DriverController.class);
         startActivity(intent);
     }
+    //pristatyti prekes
     public void confirmArrival(View view) {
         Intent intent = new Intent(this, DriverController.class);
         startActivity(intent);
     }
+
 
 
 }

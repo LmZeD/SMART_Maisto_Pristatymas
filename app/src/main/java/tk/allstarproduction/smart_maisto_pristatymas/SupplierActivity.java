@@ -17,12 +17,12 @@ public class SupplierActivity extends AppCompatActivity {
 
 
     }
-    public void receiveOrder(View view) {
+    public void showOrders(View view) {
         Intent intent = new Intent(this, DriverController.class);
         startActivity(intent);
     }
-    public void giveOrder(View view) {
-        Intent intent = new Intent(this, DriverController.class);
+    public void confirmOrder(View view) {
+        Intent intent = new Intent(this, OrderActivity.class);
         startActivity(intent);
     }
 
