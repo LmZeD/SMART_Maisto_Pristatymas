@@ -20,20 +20,35 @@
             tools:layout_editor_absoluteX="1dp"
             tools:layout_editor_absoluteY="32dp" />
 
-    <Button
-        android:id="@+id/bOrd"
-        android:layout_width="381dp"
-        android:layout_height="wrap_content"
-        android:text="Užsakyti prekes"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="109dp" />
+        <Button
+            android:id="@+id/bOrd"
+            android:layout_width="381dp"
+            android:layout_height="wrap_content"
+            android:onClick="pay"
+            android:text="Užsakyti prekes"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="109dp" />
 
-    <Button
-        android:id="@+id/bView"
-        android:layout_width="384dp"
-        android:layout_height="wrap_content"
-        android:text="Peržiūrėti prekes"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="188dp" />
+        <Button
+            android:id="@+id/bView"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:onClick="showOrders"
+            android:text="Peržiūrėti prekes"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="188dp" />
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:onClick="logout"
+            android:text="Atsijungti"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="144dp" />
+
+
     </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -12,25 +13,16 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <Button
-            android:id="@+id/button3"
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="confirmArrival"
-            android:text="Paimti prekes" />
+            app:srcCompat="@drawable/bank" />
 
-        <Button
-            android:id="@+id/button4"
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="showPosition"
-            android:text="Matyti savo poziciją žemėlapyje" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="confirmArrival"
-            android:text="Pristatyti prekes" />
+            app:srcCompat="@drawable/paypal" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

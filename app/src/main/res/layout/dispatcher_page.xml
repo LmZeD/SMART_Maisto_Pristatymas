@@ -16,12 +16,14 @@
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="showPosition"
             android:text="Stebėti vairuotojų būseną" />
 
         <Button
             android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="confirmOrder"
             android:text="Priimti užsakymus" />
 
         <Button

@@ -19,7 +19,7 @@
             android:id="@+id/bRec"
             android:layout_width="376dp"
             android:layout_height="wrap_content"
-            android:onClick="receiveOrder"
+            android:onClick="showOrders"
             android:text="Gauti užsakymą"
             tools:layout_editor_absoluteX="4dp"
             tools:layout_editor_absoluteY="155dp" />
@@ -28,7 +28,7 @@
             android:id="@+id/bGive"
             android:layout_width="376dp"
             android:layout_height="wrap_content"
-            android:onClick="giveOrder"
+            android:onClick="confirmOrder"
             android:text="Atiduoti užsakymą vairuotojui"
             tools:layout_editor_absoluteX="4dp"
             tools:layout_editor_absoluteY="212dp" />
